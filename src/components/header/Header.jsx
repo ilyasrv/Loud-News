@@ -1,10 +1,14 @@
 import "./header.css";
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
+//import Ticker from "../currency";
+//import Carousel from "../carousel-compound/";
 
-export default function Header() {
-	return (
-		<header className="header wrapper">
+
+export default class Header extends Component {
+	render() {
+		return (
+			<header className="header wrapper">
 
 				<div className="logo">
 					<img src='assets/images/logo.png' alt={'brand'} />
@@ -14,7 +18,7 @@ export default function Header() {
 						<div className="linkmenu">
 							<Link className="link" to="/">News</Link>
 							<Link className="link" to="/">Education</Link>
-						<Link className="link" to="/">Gems</Link>
+							<Link className="link" to="/">Gems</Link>
 							<Link className="link" to="/">Community</Link>
 							<Link className="link" to="/">Overview</Link>
 
@@ -32,9 +36,12 @@ export default function Header() {
 					</div>
 
 					<div className="siteheaderbottom">
+
+						<coingecko-coin-price-marquee-widget coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd" background-color="#ffffff" locale="en"></coingecko-coin-price-marquee-widget>
 					</div>
 
 				</div>
-		</header>
-	);
+			</header>
+		);
+	}
 }

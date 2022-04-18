@@ -3,11 +3,14 @@ import React from "react";
 import "./footer.css";
 
 
+
 export default function Footer() {
 	return (
+
 		<footer className="footer wrapper">
 		
 				<div className="menufooter">
+			
 					<ul className="menulinks">
 						<li className="menuitems">
 							<a href="./" aria-current="page">Privacy Policy</a>
@@ -60,7 +63,6 @@ export default function Footer() {
 		</footer>
 	);
 }
-
 
 
 
